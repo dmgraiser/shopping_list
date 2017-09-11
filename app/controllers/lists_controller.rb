@@ -15,10 +15,12 @@ class ListsController < ApplicationController
   # GET /lists/new
   def new
     @list = List.new
+    @users = User.all
   end
 
   # GET /lists/1/edit
   def edit
+    @users = User.all
   end
 
   # POST /lists
