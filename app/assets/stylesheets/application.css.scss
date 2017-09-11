@@ -1,0 +1,138 @@
+/*
+*= require_tree .
+*= require_self
+*/
+
+@import 'bootstrap';
+@import 'bootstrap/theme';
+
+.bag-contents {
+  color: #fff;
+}
+
+.header {
+  background: url(paper_bag_top.png) no-repeat 0% 100%;
+  background-size: 100% auto;
+  height: 210px;
+  padding: 20px;
+}
+
+.header-title {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.body-bag {
+  background: url(paper_bag_middle.png) no-repeat 0% 100%;
+  background-size: 100% 100%;
+  padding: 20px;
+}
+
+.footer {
+  background: url(paper_bag_bottom.png) no-repeat 0% 100%;
+  background-size: 100% auto;
+  padding: 20px;
+  height: 195px;
+  text-align: center;
+}
+
+.footer .footer-content {
+  position: relative;
+  top: 100px;
+}
+
+@media (max-width: 1199px) {
+  .footer {
+    height: 185px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-title {
+    margin-top: 25px;
+  }
+
+  .footer {
+    height: 135px;
+  }
+
+  .footer .footer-content {
+    top: 60px;
+  }
+}
+
+@media (max-width: 713px) {
+  .header-title {
+    margin-top: 40px;
+  }
+
+  .footer {
+    height: 115px;
+  }
+
+  .footer .footer-content {
+    top: 40px;
+  }
+}
+
+@media (max-width: 611px) {
+  .header {
+    height: 205px;
+  }
+
+  .footer {
+    height: 100px;
+  }
+
+  .footer .footer-content {
+    top: 30px;
+  }
+}
+
+@media (max-width: 535px) {
+  .header {
+    height: 175px;
+  }
+
+  .footer {
+    height: 85px;
+  }
+
+  .footer .footer-content {
+    top: 15px;
+  }
+}
+
+@media (max-width: 492px) {
+  .header {
+    height: 160px;
+  }
+
+  .header-title {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 460px) {
+  .header {
+    height: 150px;
+  }
+
+  .footer {
+    height: 70px;
+  }
+
+  .footer .footer-content {
+    top: 5px;
+  }
+}
+
+@media (max-width: 429px) {
+  .header {
+    height: 140px;
+  }
+
+  .header-title {
+    margin-top: 25px;
+  }
+}
