@@ -26,7 +26,32 @@
   background: url(paper_bag_middle.png) no-repeat 0% 100%;
   background-size: 100% 100%;
   padding: 20px;
+  text-align: center;
 }
+
+.body-bag h2 {
+  font-size: 50px;
+}
+
+.body-bag li {
+  font-size: 35px;
+  line-height: 35px;
+  margin: 20px 0;
+}
+
+.body-bag li span {
+  cursor: pointer;
+}
+
+.body-bag ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.quantity-span {
+  font-size: 15px;
+}
+
 
 .footer {
   background: url(paper_bag_bottom.png) no-repeat 0% 100%;
