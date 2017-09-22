@@ -4,5 +4,6 @@ class Item < ApplicationRecord
 
   def default_values
     self.quantity ||= 1
+    self.description ||= "No description"
   end
 end
