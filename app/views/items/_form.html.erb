@@ -26,10 +26,17 @@
     <%= form.number_field :quantity, id: :item_quantity %>
   </div>
 
-  <div class="field">
-    <%= form.label :list_id %>
-    <%= form.select(:list_id, @lists.collect { |l| [l.name, l.id] }, {:include_blank => "Please select a list"}) %>
-  </div>
+  <% if params[:list] %>
+    <div class="field" style="display:none;">
+      <%= form.label :list_id %>
+      <%= form.text_field :list_id, :value => params[:list] %>
+    </div>
+  <% else %>
+    <div class="field">
+      <%= form.label :list_id %>
+      <%= form.select(:list_id, @lists.collect { |l| [l.name, l.id] }, {:include_blank => "Please select a list"}) %>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>

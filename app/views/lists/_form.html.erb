@@ -21,9 +21,9 @@
     <%= form.text_area :description, id: :list_description %>
   </div>
 
-  <div class="field">
+  <div class="field" style="display:none;">
     <%= form.label :user_id %>
-    <%= form.select(:user_id, @users.collect { |l| [l.name, l.id] }, {:include_blank => "Please select a user"}) %>
+    <%= form.text_field :user_id, :value => current_user.id %>
   </div>
 
   <div class="actions">

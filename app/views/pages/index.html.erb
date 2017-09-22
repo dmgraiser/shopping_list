@@ -1,2 +1,8 @@
-<p>Select your user below</p>
-
+<ul>
+  <% current_user.lists.each do |l| %>
+    <li>
+      <%= link_to l.name, list_path(l) %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Create a new list", new_list_path %>
