@@ -61,7 +61,7 @@
 <ul class="items-ul">
   <% @items.each do |i| %>
     <li class="items-li">
-      <span><%= i.name %></span> <span class="quantity-span">x<%= i.quantity %></span>
+      <span id="item_<%= i.id %>"><%= i.name %></span> <span class="quantity-span">x<%= i.quantity %></span>
     </li>
   <% end %>
 </ul>
@@ -72,3 +72,9 @@
 </button>
 </br>
 </br>
+
+<script>
+  jQuery("span[id^='item_']").click(function() {
+    jQuery(this).toggleClass("strike-through");
+  });
+</script>
