@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="addItem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -61,13 +61,26 @@
 <ul class="items-ul">
   <% @items.each do |i| %>
     <li class="items-li">
-      <span id="item_<%= i.id %>"><%= i.name %></span> <span class="quantity-span">x<%= i.quantity %></span>
+      <span id="item_<%= i.id %>"><%= i.name %></span>
+      <span class="quantity-span">x<%= i.quantity %></span>
+      <i class="fa fa-chevron-circle-down dropdown" aria-hidden="true" id="item-dropdown-<%= i.id %>"></i>
+      <div id="item-actions_<%= i.id %>" style="display:none;">
+        <a href="#" data-toggle="tooltip" data-placement="bottom" title="<%= i.description %>">
+          <i class="fa fa-info-circle" aria-hidden="true"></i>
+        </a>
+        <%= link_to edit_item_path(i) do %>
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        <% end %>
+        <%= link_to i, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %>
+      </div>
     </li>
   <% end %>
 </ul>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addItem">
   Add another item
 </button>
 </br>
@@ -76,5 +89,9 @@
 <script>
   jQuery("span[id^='item_']").click(function() {
     jQuery(this).toggleClass("strike-through");
+  });
+
+  jQuery("i[id^='item-dropdown']").click(function() {
+    jQuery("#item-actions_" + jQuery(this).attr("id").substr(14)).toggle();
   });
 </script>
