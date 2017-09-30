@@ -97,6 +97,37 @@ input, textarea, select {
   }
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 65px;
+  }
+  .header-title {
+    margin-top: 10px;
+  }
+  .modal-dialog {
+    width: 80%;
+  }
+  h4.modal-title {
+    font-size: 60px;
+  }
+  .modal-body .field {
+    text-align: left;
+    font-size: 30px;
+  }
+  .body-bag h2 {
+    font-size: 80px;
+  }
+  .body-bag li {
+    font-size: 60px;
+    div {
+      margin-bottom: 30px;
+    }
+  }
+  .fa {
+    font-size: 30px !important;
+  }
+}
+
 @media (max-width: 713px) {
   .header-title {
     margin-top: 40px;
