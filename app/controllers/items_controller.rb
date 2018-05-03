@@ -1,6 +1,11 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+  def cross_off
+    @item.cross_off
+    redirect_to list_show_path(@list)
+  end
+
   # GET /items
   # GET /items.json
   def index

@@ -6,4 +6,12 @@ class Item < ApplicationRecord
     self.quantity ||= 1
     self.description ||= "No description"
   end
+
+  def cross_off
+    if self.crossed
+      self.update_attribute(:crossed, false)
+    else
+      self.update_attribute(:crossed, true)
+    end
+  end
 end
