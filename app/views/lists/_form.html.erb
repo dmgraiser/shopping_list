@@ -21,11 +21,6 @@
     <%= form.text_area :description, id: :list_description %>
   </div>
 
-  <div class="field" style="display:none;">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, :value => current_user.id %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
